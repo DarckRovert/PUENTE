@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esbirro del Terror | CommandCenter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-container">
+        <!-- Dashboard / Sidebar -->
+        <aside class="sidebar">
+            <header class="logo">ESBIRRO DEL <span>TERROR</span></header>
+            
+            <!-- Visor de Visión Mágica -->
+            <div class="view-panel">
+                <div class="preview-header">
+                    <span>OJO DEL VACIO V1.0</span>
+                    <span id="latency-ms" class="status-badge latency">LATENCY: --ms</span>
+                    <span id="fps-counter">LIVE</span>
+                </div>
+                <div id="screen-preview" class="live-preview">
+                    <img id="stream-img" src="" alt="Sintonizando...">
+                </div>
+            </div>
+
+            <!-- Susurros del Vacío (Thoughts) -->
+            <div class="monitor-panel">
+                <div class="preview-header">SUSURROS DEL VACÍO</div>
+                <div id="thought-log" class="thought-console">
+                    <div class="thought-entry">> Iniciando protocolos de sigilo...</div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="input-group">
+                    <label>OBJETIVO PRIORITARIO</label>
+                    <input type="text" id="window-search" value="World of Warcraft">
+                    <button id="btn-find-window" class="btn-mini">VINCULAR VINCULOS</button>
+                    <div id="window-status" class="status-badge active">ACTIVO</div>
+                </div>
+                
+                <button id="start-agent-btn" class="btn-primary" style="margin-bottom: 10px; width: 100%; font-family: var(--font-mono); font-size: 0.8rem;">LIBERAR ESBIRRO</button>
+                <button id="panic-btn" class="panic-button">DESACTIVAR PROTOCOLO (PANIC)</button>
+            </div>
+        </aside>
+
+        <!-- Chat / Comando -->
+        <section class="chat-section">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message system">
+                    <p>[!] Esbirro Fast-Track sintonizado. Ojo del Vacío V1.0 (Moondream) Activo.</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="model-selector">
+                    <select id="model-select">
+                        <option value="moondream:latest">AGENTE: MOONDREAM (ULTRA-FAST)</option>
+                        <option value="qwen3-vl:8b">AGENTE: QWEN3-VL (8B PRECISION)</option>
+                        <option value="deepseek-r1:8b">ADVISOR: DEEPSEEK-R1 (8B)</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Dicta una orden al Vacío..."></textarea>
+                    <button id="send-btn" class="btn-primary">ENVIAR</button>
+                </div>
+                <div class="stream-control">
+                    <button id="toggle-stream" class="btn-mini active">VISION</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

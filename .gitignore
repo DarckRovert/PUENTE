@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Imagen generados
+*.png
+*.jpg
+*.jpeg
+last_action.png
+last_capture.png
+full_screen.png
+wow_capture.png
+wow_real.png
+
+# Entornos virtuales
+venv/
+env/
+.env
+.venv
+
+# VS Code / IDEs
+.vscode/
+.idea/
+.DS_Store
